@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Vendor Dashboard</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Vendor Name</th>
+                <th>Contact</th>
+                <th>Date Submitted</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vendor in vendors %}
+            <tr>
+                <td>{{ vendor['vendor_name'] }}</td>
+                <td>{{ vendor['contact'] }}</td>
+                <td>{{ vendor['date_submitted'] }}</td>
+                <td><a href="{{ url_for('compliance_report', vendor_id=vendor['id']) }}">View Report</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
