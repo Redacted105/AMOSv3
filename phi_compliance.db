@@ -1,0 +1,24 @@
+import sqlite3
+
+conn = sqlite3.connect('phi_compliance.db')
+c = conn.cursor()
+
+# Create table for vendors
+c.execute('''
+CREATE TABLE vendors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    vendor_name TEXT NOT NULL,
+    contact TEXT NOT NULL,
+    encryption TEXT NOT NULL,
+    data_destruction TEXT NOT NULL,
+    access_control TEXT NOT NULL,
+    audit_logs TEXT NOT NULL,
+    incident_response TEXT NOT NULL,
+    subcontractor_compliance TEXT NOT NULL,
+    employee_training TEXT NOT NULL,
+    date_submitted TEXT NOT NULL
+)
+''')
+
+conn.commit()
+conn.close()
