@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Compliance Report for {{ vendor['vendor_name'] }}</h2>
+    <p><strong>Contact Information:</strong> {{ vendor['contact'] }}</p>
+    <p><strong>Encryption Methods:</strong> {{ vendor['encryption'] }}</p>
+    <p><strong>Data Destruction Methods:</strong> {{ vendor['data_destruction'] }}</p>
+    <p><strong>Access Controls:</strong> {{ vendor['access_control'] }}</p>
+    <p><strong>Audit Logs:</strong> {{ vendor['audit_logs'] }}</p>
+    <p><strong>Incident Response:</strong> {{ vendor['incident_response'] }}</p>
+    <p><strong>Subcontractor Compliance:</strong> {{ vendor['subcontractor_compliance'] }}</p>
+    <p><strong>Employee Training:</strong> {{ vendor['employee_training'] }}</p>
+{% endblock %}
