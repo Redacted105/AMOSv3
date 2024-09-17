@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Vendor Submission Form</h2>
+    <form method="POST">
+        <label for="vendor_name">Vendor Name:</label>
+        <input type="text" name="vendor_name" required>
+
+        <label for="contact">Contact Information:</label>
+        <input type="text" name="contact" required>
+
+        <label for="encryption">Encryption Methods:</label>
+        <textarea name="encryption" required></textarea>
+
+        <label for="data_destruction">Data Destruction Methods:</label>
+        <textarea name="data_destruction" required></textarea>
+
+        <label for="access_control">Access Controls:</label>
+        <textarea name="access_control" required></textarea>
+
+        <label for="audit_logs">Audit Logging:</label>
+        <textarea name="audit_logs" required></textarea>
+
+        <label for="incident_response">Incident Response:</label>
+        <textarea name="incident_response" required></textarea>
+
+        <label for="subcontractor_compliance">Subcontractor Compliance:</label>
+        <textarea name="subcontractor_compliance" required></textarea>
+
+        <label for="employee_training">Employee Training:</label>
+        <textarea name="employee_training" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
