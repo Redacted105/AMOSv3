@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Welcome to the PHI Data Protection Tool</h2>
+    <p>This tool helps assess if vendors comply with HIPAA guidelines for rendering protected health information (PHI) unusable, unreadable, or indecipherable to unauthorized individuals.</p>
+    <a href="{{ url_for('add_vendor') }}" class="button">Submit Vendor for Compliance Check</a>
+{% endblock %}
